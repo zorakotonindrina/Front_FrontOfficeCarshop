@@ -1,0 +1,80 @@
+/* listemessage.css */
+
+.message-list-container {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .message-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .message-list li {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    position: relative;
+    word-wrap: break-word;
+  }
+  
+  .sent {
+    background-color: #0084ff;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .received {
+    background-color: #f0f0f0;
+    color: #000;
+    align-self: flex-start;
+  }
+  
+  .timestamp {
+    font-size: 0.8em;
+    color: #888;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  
+  .message-list li strong {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  .message-list li.sent {
+    align-self: flex-end;
+  }
+  
+  .message-list li.received {
+    align-self: flex-start;
+  }
+  
+  .message-list li.sent::before {
+    content: '\00a0';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #0084ff;
+    margin-top: -8px;
+  }
+  
+  .message-list li.received::before {
+    content: '\00a0';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid #f0f0f0;
+    margin-top: -8px;
+  }
+  
